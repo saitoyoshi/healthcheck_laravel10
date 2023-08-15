@@ -8,6 +8,13 @@
 </head>
 <body>
   <h2>登録画面</h2>
+  @if($errors->any())
+    @foreach($errors->all() as $error)
+    <ul>
+        <li style="color: red">{{ $error }}</li>
+    </ul>
+    @endforeach
+  @endif
   <form action="{{ route('record.store') }}" method="post">
     @csrf
     <div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostFormRequest;
 use App\Models\Record;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -17,7 +18,7 @@ class RecordController extends Controller
     public function create(): View {
         return view('record.create');
     }
-    public function store(Request $request) {
+    public function store(PostFormRequest $request) {
         $record = new Record();
         $record->physical_condition = $request->physical_condition;
         $record->mood_state = $request->mood_state;
