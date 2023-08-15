@@ -12,6 +12,12 @@
   @foreach($records as $record)
     <ul>
         <a href="{{ route('record.edit', $record) }}"><button>更新</button></a>
+        <form action="{{ route('record.destroy', $record) }}" method="post">
+            @csrf
+            @method('delete')
+            <button onclick="return confirm('本当に削除しますか');">削除</button>
+
+        </form>
         <li>体調: {{ $record->physical_condition }}</li>
         <li>気分: {{ $record->mood_state }}</li>
         <li>肩こり: {{ $record->back_pain }}</li>

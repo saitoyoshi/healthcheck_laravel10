@@ -43,6 +43,11 @@ class RecordController extends Controller
         $record->recording_date = $request->recording_date;
         $record->update();
         return redirect(route('record.index'));
+    }
+
+    public function destroy(Record $record) {
+        $record->delete();
+        return redirect(route('record.index'));
 
     }
 }
