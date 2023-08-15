@@ -32,4 +32,15 @@ class RecordController extends Controller
     public function edit(Record $record) {
         return view('record.edit', compact('record'));
     }
+    public function update(Request $request, Record $record) {
+        $record->physical_condition = $request->physical_condition;
+        $record->mood_state = $request->mood_state;
+        $record->back_pain = $request->back_pain;
+        $record->eyestrain = $request->eyestrain;
+        $record->headache = $request->headache;
+        $record->recording_date = $request->recording_date;
+        $record->update();
+        return redirect(route('record.index'));
+
+    }
 }

@@ -8,8 +8,9 @@
 </head>
 <body>
   <h2>登録画面</h2>
-  <form action="" method="post">
+  <form action="{{ route('record.update', $record) }}" method="post">
     @csrf
+    @method('put')
     <div>
     <label for="">体調</label>
     <input type="number" name="physical_condition" id="" value="{{ old('physical_condition', $record->physical_condition) }}">
