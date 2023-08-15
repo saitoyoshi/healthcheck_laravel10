@@ -51,7 +51,7 @@
         <li>肩こり: {{ message($record->back_pain) }}</li>
         <li>目の疲れ: {{ message($record->eyestrain) }}</li>
         <li>頭痛: {{ message($record->headache) }}</li>
-        <li>日時: {{ date('Y年n月j日', strtotime($record->recording_date)) }}</li>
+        <li>記録日時: {{ date('Y年n月j日', strtotime($record->recording_date)) }}</li>
     </ul>
   @endforeach
 </body>
