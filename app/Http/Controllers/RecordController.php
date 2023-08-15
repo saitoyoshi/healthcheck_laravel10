@@ -29,4 +29,7 @@ class RecordController extends Controller
         $record->save();
         return redirect(route('record.index'));
     }
+    public function edit(Record $record) {
+        return view('record.edit', compact('record'));
+    }
 }

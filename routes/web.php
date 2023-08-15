@@ -24,4 +24,5 @@ Route::prefix('/record')->name('record.')->controller(RecordController::class)->
     Route::get('', 'index')->name('index');
     Route::get('/create', 'create')->name('create');
     Route::post('', 'store')->name('store');
+    Route::get('/record/{record}/edit', 'edit')->name('edit');
 });

@@ -11,6 +11,7 @@
   <a href="{{ route('record.create') }}">追加</a>
   @foreach($records as $record)
     <ul>
+        <a href="{{ route('record.edit', $record) }}"><button>更新</button></a>
         <li>体調: {{ $record->physical_condition }}</li>
         <li>気分: {{ $record->mood_state }}</li>
         <li>肩こり: {{ $record->back_pain }}</li>
