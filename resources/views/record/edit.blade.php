@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h2>更新画面</h2>
+<x-layout.layout>
+    <x-slot:title>
+        更新
+    </x-slot:title>
+<h2>更新画面</h2>
   <a href="{{ route('record.index') }}">戻る</a>
   @if($errors->any())
     @foreach($errors->all() as $error)
@@ -46,5 +41,4 @@
 </div>
 <button>更新</button>
 </form>
-</body>
-</html>
+</x-layout.layout>

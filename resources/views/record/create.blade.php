@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<x-layout.layout>
+    <x-slot:title>
+        登録
+    </x-slot:title>
   <h2>登録画面</h2>
   <a href="{{ route('record.index') }}">戻る</a>
   @if($errors->any())
@@ -45,5 +40,4 @@
 </div>
 <button>登録</button>
 </form>
-</body>
-</html>
+</x-layout.layout>
