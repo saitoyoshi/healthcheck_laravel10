@@ -20,5 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/record', [RecordController::class, 'index'])->name('record.index');
-Route::get('/record/create', [RecordController::class, 'create'])->name('record.create');
+Route::prefix('/record')->name('record.')->controller(RecordController::class)->group(function() {
+    Route::get('', 'index')->name('index');
+Route::get('/create', 'create')->name('create');
+
+});
