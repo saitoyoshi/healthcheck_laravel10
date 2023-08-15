@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h1>健康管理アプリ</h1>
+<x-layout.layout>
+    <x-slot:title>記録一覧</x-slot:title>
+
   <h2>記録一覧画面</h2>
   @php
       function message(int $v) {
@@ -54,5 +47,4 @@
         <li>記録日時: {{ date('Y年n月j日', strtotime($record->recording_date)) }}</li>
     </ul>
   @endforeach
-</body>
-</html>
+</x-layout.layout>
