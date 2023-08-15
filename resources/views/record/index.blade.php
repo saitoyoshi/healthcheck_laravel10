@@ -8,6 +8,31 @@
 </head>
 <body>
   <h1>健康管理アプリ</h1>
+  <h2>記録一覧画面</h2>
+  @php
+      function message(int $v) {
+        switch ($v) {
+            case 5:
+                return 'とても良い';
+                break;
+            case 4:
+                return '良い';
+                break;
+            case 3:
+                return '普通';
+                break;
+            case 2:
+                return '悪い';
+                break;
+            case 1:
+                return 'とても悪い';
+                break;
+            default:
+                return '不正な値が入力されました';
+                break;
+        }
+      }
+  @endphp
   @if(session('message'))
     <p style="color:blue">{{ session('message') }}</p>
   @endif
@@ -21,12 +46,12 @@
             <button onclick="return confirm('本当に削除しますか');">削除</button>
 
         </form>
-        <li>体調: {{ $record->physical_condition }}</li>
-        <li>気分: {{ $record->mood_state }}</li>
-        <li>肩こり: {{ $record->back_pain }}</li>
-        <li>目の疲れ: {{ $record->eyestrain }}</li>
-        <li>頭痛: {{ $record->headache }}</li>
-        <li>日時: {{ date('Y/n/j', strtotime($record->recording_date)) }}</li>
+        <li>体調: {{ message($record->physical_condition) }}</li>
+        <li>気分: {{ message($record->mood_state) }}</li>
+        <li>肩こり: {{ message($record->back_pain) }}</li>
+        <li>目の疲れ: {{ message($record->eyestrain) }}</li>
+        <li>頭痛: {{ message($record->headache) }}</li>
+        <li>日時: {{ date('Y年n月j日', strtotime($record->recording_date)) }}</li>
     </ul>
   @endforeach
 </body>
