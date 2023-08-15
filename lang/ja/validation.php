@@ -175,6 +175,13 @@ return [
     */
 
     'attributes' => [
+        'physical_condition' => '体調',
+        'mood_state' => '気分',
+        'back_pain' => '肩こり',
+        'eyestrain' => '目の疲れ',
+        'headache' => '頭痛',
+        'recording_date' => '記録日時',
+
         'address' => '住所',
         'age' => '歳',
         'amount' => '額',
