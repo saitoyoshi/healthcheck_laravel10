@@ -8,6 +8,9 @@
 </head>
 <body>
   <h1>健康管理アプリ</h1>
+  @if(session('message'))
+    <p style="color:blue">{{ session('message') }}</p>
+  @endif
   <a href="{{ route('record.create') }}">追加</a>
   @foreach($records as $record)
     <ul>

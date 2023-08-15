@@ -29,7 +29,7 @@ class RecordController extends Controller
         $record->recording_date = $request->recording_date;
 
         $record->save();
-        return redirect(route('record.index'));
+        return redirect(route('record.index'))->with('message', '健康記録を登録しました');
     }
     public function edit(Record $record) {
         return view('record.edit', compact('record'));
@@ -42,12 +42,12 @@ class RecordController extends Controller
         $record->headache = $request->headache;
         $record->recording_date = $request->recording_date;
         $record->update();
-        return redirect(route('record.index'));
+        return redirect(route('record.index'))->with('message', '健康記録を更新しました');
     }
 
     public function destroy(Record $record) {
         $record->delete();
-        return redirect(route('record.index'));
+        return redirect(route('record.index'))->with('message', '健康記録を削除しました');
 
     }
 }
