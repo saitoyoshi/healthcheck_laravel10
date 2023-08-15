@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\PostFormRequest;
+use App\Http\Requests\PutFormRequest;
 use App\Models\Record;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -33,7 +34,7 @@ class RecordController extends Controller
     public function edit(Record $record) {
         return view('record.edit', compact('record'));
     }
-    public function update(Request $request, Record $record) {
+    public function update(PutFormRequest $request, Record $record) {
         $record->physical_condition = $request->physical_condition;
         $record->mood_state = $request->mood_state;
         $record->back_pain = $request->back_pain;

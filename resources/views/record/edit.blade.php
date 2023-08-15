@@ -7,7 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>登録画面</h2>
+  <h2>更新画面</h2>
+  @if($errors->any())
+    @foreach($errors->all() as $error)
+    <ul>
+        <li style="color: red">{{ $error }}</li>
+    </ul>
+    @endforeach
+  @endif
   <form action="{{ route('record.update', $record) }}" method="post">
     @csrf
     @method('put')
