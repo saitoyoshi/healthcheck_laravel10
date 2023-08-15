@@ -9,7 +9,14 @@
 <body>
   <h1>健康管理アプリ</h1>
   @foreach($records as $record)
-
+    <ul>
+        <li>体調: {{ $record->physical_condition }}</li>
+        <li>気分: {{ $record->mood_state }}</li>
+        <li>肩こり: {{ $record->back_pain }}</li>
+        <li>目の疲れ: {{ $record->eyestrain }}</li>
+        <li>頭痛: {{ $record->headache }}</li>
+        <li>日時: {{ $record->recording_date }}</li>
+    </ul>
   @endforeach
 </body>
 </html>
