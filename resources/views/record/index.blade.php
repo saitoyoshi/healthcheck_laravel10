@@ -8,6 +8,7 @@
 </head>
 <body>
   <h1>健康管理アプリ</h1>
+  <a href="{{ route('record.create') }}">追加</a>
   @foreach($records as $record)
     <ul>
         <li>体調: {{ $record->physical_condition }}</li>

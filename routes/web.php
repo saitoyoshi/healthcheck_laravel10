@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\RecordController;
+use App\Models\Record;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +20,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/record', [IndexController::class, 'index'])->name('record.index');
+Route::get('/record', [RecordController::class, 'index'])->name('record.index');
+Route::get('/record/create', [RecordController::class, 'create'])->name('record.create');
