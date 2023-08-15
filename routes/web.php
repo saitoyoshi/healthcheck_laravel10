@@ -22,6 +22,6 @@ Route::get('/', function () {
 
 Route::prefix('/record')->name('record.')->controller(RecordController::class)->group(function() {
     Route::get('', 'index')->name('index');
-Route::get('/create', 'create')->name('create');
-
+    Route::get('/create', 'create')->name('create');
+    Route::post('', 'store')->name('store');
 });
