@@ -8,6 +8,7 @@
 </head>
 <body>
   <h2>更新画面</h2>
+  <a href="{{ route('record.index') }}">戻る</a>
   @if($errors->any())
     @foreach($errors->all() as $error)
     <ul>
