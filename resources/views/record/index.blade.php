@@ -12,7 +12,7 @@
     @foreach ($records as $record)
     <ul class="mb-4 border border-2 py-3">
             <div class="row mb-0">
-            <h5 class="col-auto">作成日時: {{ date('Y/n/j', strtotime($record->updated_at)) }}</h5>
+            <h5 class="col-auto"><a href="{{ route('record.show', $record) }}">作成日時: {{ date('Y/n/j', strtotime($record->updated_at)) }}</a></h5>
                 <div class="col-auto">
                     <a href="{{ route('record.edit', $record) }}"><button class="btn btn-info btn-sm">更新</button></a>
                 </div>

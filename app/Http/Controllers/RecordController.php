@@ -31,6 +31,9 @@ class RecordController extends Controller
         $record->save();
         return redirect(route('record.index'))->with('message', '健康記録を登録しました');
     }
+    public function show(Record $record) {
+        return view('record.show', compact('record'));
+    }
     public function edit(Record $record) {
         return view('record.edit', compact('record'));
     }
