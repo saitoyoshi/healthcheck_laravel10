@@ -22,6 +22,7 @@ class RecordFactory extends Factory
             'back_pain' => fake()->numberBetween(1,5),
             'eyestrain' => fake()->numberBetween(1,5),
             'headache' => fake()->numberBetween(1,5),
+            'comment' => fake()->realText(),
             'recording_date' => fake()->date(),
         ];
     }
