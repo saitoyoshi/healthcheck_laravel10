@@ -9,34 +9,34 @@
   @endif
   <form action="{{ route('record.store') }}" method="post">
     @csrf
-    <div>
-    <label for="">体調</label>
-    <input type="number" name="physical_condition" id="" value="{{ old('physical_condition') }}">
+    <div class="mb-3">
+    <label for="" class="form-label">体調</label>
+    <input type="number" name="physical_condition" class="form-control" id="" value="{{ old('physical_condition') }}">
 </div>
-<div>
-    <label for="">気分</label>
-    <input type="number" name="mood_state" id="" value="{{ old('mood_state') }}">
+<div class="mb-3">
+    <label for="" class="form-label">気分</label>
+    <input class="form-control" type="number" name="mood_state" id="" value="{{ old('mood_state') }}">
 </div>
-<div>
-    <label for="">肩こり</label>
-    <input type="number" name="back_pain" id="" value="{{ old('back_pain') }}">
+<div class="mb-3">
+    <label for="" class="form-label">肩こり</label>
+    <input class="form-control" type="number" name="back_pain" id="" value="{{ old('back_pain') }}">
 </div>
-<div>
-    <label for="">眼精疲労</label>
-    <input type="number" name="eyestrain" id="" value="{{ old('eyestrain') }}">
+<div class="mb-3">
+    <label for="" class="form-label">眼精疲労</label>
+    <input class="form-control" type="number" name="eyestrain" id="" value="{{ old('eyestrain') }}">
 
 </div>
-<div>
-    <label for="">頭痛</label>
-    <input type="number" name="headache" id="" value="{{ old('headache') }}">
+<div class="mb-3">
+    <label for="" class="form-label">頭痛</label>
+    <input class="form-control" type="number" name="headache" id="" value="{{ old('headache') }}">
 </div>
-<div>
-    <label for="">記録日時</label>
-    <input type="date" name="recording_date" id="" value="{{ old('recording_date', date('Y-m-d')) }}">
+<div class="mb-3">
+    <label for="" class="form-label">記録日時</label>
+    <input class="form-control" type="date" name="recording_date" id="" value="{{ old('recording_date', date('Y-m-d')) }}">
 </div>
-<div>
-    <textarea name="comment" id="" cols="30" rows="5">{{ old('comment') }}</textarea>
+<div class="mb-3">
+    <textarea class="form-control"  name="comment" id="" cols="30" rows="5">{{ old('comment') }}</textarea>
 </div>
-<button>登録</button>
+<button class="btn btn-primary">登録</button>
 </form>
 </x-layout.layout>
