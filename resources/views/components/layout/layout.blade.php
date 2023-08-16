@@ -9,13 +9,13 @@
   <title>{{ $title }}</title>
 </head>
 <body class="container">
-    <header><h1 class="">健康管理アプリ</h1></header>
+    <header class="pt-4 pb-2"><h1 class="">健康管理アプリ</h1></header>
 
     <hr>
     <main>
     {{ $slot }}
 </main>
-<footer>
+<footer class="py-4">
     @laravel
 </footer>
 </body>
