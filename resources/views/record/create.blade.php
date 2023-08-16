@@ -32,7 +32,7 @@
 </div>
 <div>
     <label for="">記録日時</label>
-    <input type="date" name="recording_date" id="" value="{{ old('recording_date') }}">
+    <input type="date" name="recording_date" id="" value="{{ old('recording_date', date('Y-m-d')) }}">
 </div>
 <button>登録</button>
 </form>
