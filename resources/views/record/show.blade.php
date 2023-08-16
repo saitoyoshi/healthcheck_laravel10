@@ -2,8 +2,11 @@
     <x-slot:title>詳細画面</x-slot:title>
     <x-message-function></x-message-function>
 <ul>
-    <span>コメント</span>
+    <a href="{{ route('record.index') }}">戻る</a>
+    <div class="mt-3">
+    <span class="">コメント</span>
     <p class="border border-2 p-3 mt-3">{{ $record->comment }}</p>
+</div>
 <li>体調: {{ message($record->physical_condition) }}</li>
 <li>気分: {{ message($record->mood_state) }}</li>
 <li>肩こり: {{ message($record->back_pain) }}</li>
