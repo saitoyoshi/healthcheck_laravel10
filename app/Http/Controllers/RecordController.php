@@ -12,7 +12,7 @@ use Illuminate\View\View;
 class RecordController extends Controller
 {
     public function index(): View {
-        $records = Record::orderBy('created_at', 'desc')->get();
+        $records = Record::orderBy('created_at', 'desc')->paginate(10);
 
         return view('record.index', compact('records'));
     }

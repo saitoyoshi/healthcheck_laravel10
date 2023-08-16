@@ -30,4 +30,7 @@
             <li class="ps-3">記録日時: {{ date('Y年n月j日', strtotime($record->recording_date)) }}</li>
         </ul>
     @endforeach
+    <div class="container">
+    {!! $records->links('pagination::bootstrap-5') !!}
+</div>
 </x-layout.layout>
