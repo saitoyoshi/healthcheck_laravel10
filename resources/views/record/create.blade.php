@@ -9,7 +9,7 @@
   @endif
   <form action="{{ route('record.store') }}" method="post">
     @csrf
-    <div class="mb-3">
+    <div class="mb-3 mt-3">
     <label for="" class="form-label">体調</label>
     <input type="number" name="physical_condition" class="form-control" id="" value="{{ old('physical_condition') }}">
 </div>

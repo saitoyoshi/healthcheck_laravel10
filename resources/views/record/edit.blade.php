@@ -10,7 +10,7 @@
   <form action="{{ route('record.update', $record) }}" method="post">
     @csrf
     @method('put')
-    <div class="mb-3">
+    <div class="mb-3 mt-3">
     <label for="" class="form-label">体調</label>
     <input class="form-control" type="number" name="physical_condition" id="" value="{{ old('physical_condition', $record->physical_condition) }}">
 </div>
