@@ -181,6 +181,7 @@ return [
         'eyestrain' => '目の疲れ',
         'headache' => '頭痛',
         'recording_date' => '記録日時',
+        'comment' => 'コメント',
 
         'address' => '住所',
         'age' => '歳',
