@@ -27,7 +27,7 @@ class PostFormRequest extends FormRequest
             'back_pain' => 'required|integer|between:1,5',
             'eyestrain' => 'required|integer|between:1,5',
             'headache' => 'required|integer|between:1,5',
-            'recording_date' => 'required|date',
+            'recording_date' => 'required|date|unique:healthrecords',
             'comment' => 'max:1000',
         ];
     }
