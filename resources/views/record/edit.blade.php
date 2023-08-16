@@ -35,6 +35,9 @@
     <label for="">記録日時</label>
     <input type="date" name="recording_date" id="" value="{{ old('recording_date', $record->recording_date) }}">
 </div>
+<div>
+    <textarea name="comment" id="" cols="30" rows="5">{{ old('comment', $record->comment) }}</textarea>
+</div>
 <button>更新</button>
 </form>
 </x-layout.layout>

@@ -45,6 +45,7 @@ class RecordController extends Controller
         $record->eyestrain = $request->eyestrain;
         $record->headache = $request->headache;
         $record->recording_date = $request->recording_date;
+        $record->comment = $request->comment;
         $record->update();
         return redirect(route('record.index'))->with('message', '健康記録を更新しました');
     }
