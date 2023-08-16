@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-dark-mode/1.0.2/bootstrap-dark-mode.min.css">
   <title>{{ $title }}</title>
 </head>
-<body>
+<body class="container">
     <header><h1 class="">健康管理アプリ</h1></header>
 
     <hr>
