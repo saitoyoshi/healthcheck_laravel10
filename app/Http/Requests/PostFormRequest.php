@@ -28,6 +28,7 @@ class PostFormRequest extends FormRequest
             'eyestrain' => 'required|integer|between:1,5',
             'headache' => 'required|integer|between:1,5',
             'recording_date' => 'required|date',
+            'comment' => 'max:1000',
         ];
     }
 }
