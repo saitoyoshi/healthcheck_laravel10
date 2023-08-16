@@ -11,15 +11,15 @@
     </div>
     @foreach ($records as $record)
     <ul class="mb-4">
-            <div class="row mb-2">
+            <div class="row mb-0">
             <h5 class="col-auto">作成日時: {{ date('Y/n/j', strtotime($record->updated_at)) }}</h5>
                 <div class="col-auto">
-                    <a href="{{ route('record.edit', $record) }}"><button class="">更新</button></a>
+                    <a href="{{ route('record.edit', $record) }}"><button class="btn btn-info btn-sm">更新</button></a>
                 </div>
                 <form class="col-auto" action="{{ route('record.destroy', $record) }}" method="post">
                     @csrf
                     @method('delete')
-                    <button class="d-block" onclick="return confirm('本当に削除しますか');">削除</button>
+                    <button class="btn btn-danger btn-sm" onclick="return confirm('本当に削除しますか');">削除</button>
                 </form>
             </div>
             <li>体調: {{ message($record->physical_condition) }}</li>
