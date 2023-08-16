@@ -10,7 +10,7 @@
         <a href="{{ route('record.create') }}">追加</a>
     </div>
     @foreach ($records as $record)
-    <ul class="mb-4">
+    <ul class="mb-4 border border-2 py-3">
             <div class="row mb-0">
             <h5 class="col-auto">作成日時: {{ date('Y/n/j', strtotime($record->updated_at)) }}</h5>
                 <div class="col-auto">
